@@ -19,4 +19,7 @@ jobs:
       - name: Build app
         run: ./scripts/buildprod.sh
 
+      - name: Build docker image and push to registry
+        run: gcloud builds submit --tag us-central1-docker.pkg.dev/storied-port-459815-v3/notely-ar-repo/notely:latest
+
 
